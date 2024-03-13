@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Acadêmico - IFPB</title>
+</head>
+
+<body>
+
+    <!-- Aluno -->
+    <h2>Cadastrar Aluno</h2>
+    Nome:<input id="nomeAluno"><br>
+    Idade:<input id="idadeAluno" type="number"><br>
+    Matrícula:<input id="matriculaAluno"><br>
+    <button onclick="controladorAluno.inserir()">Cadastrar Aluno</button>
+    <button onclick="controladorAluno.listarMenoresIdade()">Mostrar Menores</button>
+
+    <ol id="listaAlunos"></ol>
+
+
+    <!-- Disciplina -->
+    <h2>Cadastrar Disciplina</h2>
+    Código:<input id="codigoDisciplina"><br>
+    Nome:<input id="nomeDisciplina"><br>
+    <button onclick="controladorDisciplina.inserir()">Cadastrar Disciplina</button>
+
+    <h2>Pesquisar Disciplina por Código</h2>
+    Código:<input id="codigoPesquisaDisciplina"><br>
+    <button onclick="controladorDisciplina.pesquisarPorCodigo()">Pesquisar</button>
+    <div id="disciplinaEncontrada"></div>
+
+    <h2>Atualizar Disciplina</h2>
+    Código:<input id="codigoAtualizarDisciplina"><br>
+    Novo Nome:<input id="novoNomeDisciplina"><br>
+    <button onclick="controladorDisciplina.atualizar()">Atualizar</button>
+
+    <h2>Remover Disciplina</h2>
+    Código:<input id="codigoRemoverDisciplina"><br>
+    <button onclick="controladorDisciplina.remover()">Remover</button>
+
+    <h2>Adicionar Aluno em Disciplina</h2>
+    Código da Disciplina:<input id="codigoAdicionarAluno"><br>
+    Nome do Aluno:<input id="nomeAlunoDisciplina"><br>
+    Idade do Aluno:<input id="idadeAlunoDisciplina" type="number"><br>
+    Matrícula do Aluno:<input id="matriculaAlunoDisciplina"><br>
+    <button onclick="controladorDisciplina.adicionarAlunoNaDisciplina()">Adicionar Aluno</button>
+
+    <script src="modelo/aluno.js"></script>
+    <script src="repositorio/aluno_repositorio.js"></script>
+    <script src="servico/aluno_service.js"></script>
+    <script src="controlador/aluno_controlador.js"></script>
+    <script src="modelo/disciplina.js"></script>
+    <script src="repositorio/disciplina_repositorio.js"></script>
+    <script src="servico/disciplina_servico.js"></script>
+    <script src="controlador/disciplina_controlador.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
